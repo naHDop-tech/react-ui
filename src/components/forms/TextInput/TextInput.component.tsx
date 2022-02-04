@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 import { StyledInput, StyledLabel, StyledMessage, StyledText } from './styles'
 import { ITextInputProps } from './types'
