@@ -7,8 +7,7 @@ export const Button: FC<IButtonProps> = (props): JSX.Element => {
     const {size, primary, disabled, text, onClick, ...rest} = props
 
     return (
-        <StyledButton 
-            type="button" 
+        <StyledButton
             onClick={onClick} 
             primary={primary} 
             disabled={disabled} 

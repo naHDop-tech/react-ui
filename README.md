@@ -35,7 +35,7 @@ const App = (): JSX.Element => {
                 text="Push me"
                 onCLick={onClickHandler}
                 primary
-                plac
+                type="submit"
             />
         </form>
     )
