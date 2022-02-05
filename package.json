@@ -1,7 +1,7 @@
 {
-  "name": "react-ui",
-  "version": "1.0.0",
-  "description": "PET Project",
+  "name": "@tech-friday/react-ui",
+  "version": "0.0.1",
+  "description": "This is a react-ui PET project.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
