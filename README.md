@@ -32,9 +32,9 @@ const App = (): JSX.Element => {
             <TextInput onChange={onChangeHandler} placeholder="Enter your text" />
 
             <Button 
-                text="Push me"
+                label="Push me"
                 onCLick={onClickHandler}
-                primary
+                color="success"
                 type="submit"
             />
         </form>
