@@ -1,25 +1,47 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { IButtonProps } from './types'
+import { COLOR_MAP } from '@ui/colorMap'
 
 export const StyledButton = styled.button<IButtonProps>`
-    border: 0;
-    line-height: 1;
-    font-size: 15px;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
     cursor: pointer;
-    font-weight: 700;
-    font-weight: bold;
-    border-radius: 3px;
+    font-weight: 400;
+    border-radius: 4px;
     display: inline-block;
-    padding: ${props => props.size === "small"? "7px 25px 8px" : (props.size === "medium"? "9px 30px 11px" : "14px 30px 16px" )};
-    color: ${props => props.primary? "#1b116e":"#ffffff"};
-    background-color: ${props => props.primary ? "#6bedb5":"#1b116e"};
-    opacity: ${props => props.disabled ? 0.5 : 1};
+    ${({ size = 'large' }) => {
+      if (size === 'large') {
+        return css`
+          padding: 10px 14px;
+        `
+      }
+      if (size === 'medium') {
+        return css`
+          padding: 4px 12px;
+        `
+      }
+      if (size === 'small') {
+        return css`
+          font-size: 12px;
+          line-height: 20px;
+          padding: 2px 8px;
+        `
+      }
+    }}
+    color: ${({ color }) => color === 'disabled' || color === 'inactive' ? COLOR_MAP.disabledText : COLOR_MAP.pureWhite};
+    background-color: ${({ color = 'primary' }) => COLOR_MAP[color]};
+    ${({ disabled = false }) => disabled && 
+      css`
+        opacity: 0.8;
+        pointer-events: none;
+      `
+    };
     &:hover {
-      background-color: ${props => props.primary ? "#55bd90":"#6bedb5"};
+      filter: brightness(107%);
     }
     &:active {
-        border: solid 2px #1b116e;
-        padding: ${props => props.size === "small"? "5px 23px 6px" : (props.size === "medium"? "7px 28px 9px" : "12px 28px 14px" )};
+      transform: translateY(1px);
     }
 `;
