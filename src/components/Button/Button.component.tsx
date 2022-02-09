@@ -12,7 +12,11 @@ export const Button: FC<IButtonProps> = (props): JSX.Element => {
         <StyledButton
             {...rest}
         >
-            {isLoading ? (<>{label}<Loader isLoading={isLoading} size='small' color={rest.color}/></>) : label}
+            {isLoading ? (
+                <>
+                    {label}<Loader isLoading={isLoading} size='small' color={rest.color} />
+                </>
+            ) : label}
         </StyledButton>
     )
 }
