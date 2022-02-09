@@ -1,11 +1,13 @@
 import {  MouseEventHandler } from "react"
 
+import { Colors, Sizes } from '@ui/types'
+
 export interface IButtonProps {
     type?: "button" | "submit"
     label?: string,
-    color?: 'primary' | 'success' | 'error' | 'warning' | 'inactive' | 'disabled' 
+    color?: Colors 
     disabled?: boolean,
-    size?: "small" | "medium" | "large",
+    size?: Sizes,
     isLoading?: boolean
     wide?: boolean
     outline?: boolean

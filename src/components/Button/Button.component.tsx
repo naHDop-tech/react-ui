@@ -4,11 +4,10 @@ import { StyledButton } from './styles'
 import { IButtonProps } from './types'
 
 export const Button: FC<IButtonProps> = (props): JSX.Element => {
-    const { label, onClick, ...rest } = props
+    const { label, ...rest } = props
 
     return (
         <StyledButton
-            onClick={onClick} 
             {...rest}
         >
             {label}
