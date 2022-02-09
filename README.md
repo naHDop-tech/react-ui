@@ -10,7 +10,7 @@ PET Project
  - Storybook
  - Styled-component
  - Type Script
-# Examples
+# Base Example
 
 ```js
 import { ReactEventHandler, ChangeEventHandler, useState } from 'react'
@@ -41,3 +41,7 @@ const App = (): JSX.Element => {
     )
 }
 ```
+
+# List implemented components from design
+ - Button
+ - Loader

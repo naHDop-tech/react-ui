@@ -1,19 +1,22 @@
 import React, { FC } from 'react'
 
+import { Loader } from '@components/Loader'
+
 import { StyledButton } from './styles'
 import { IButtonProps } from './types'
 
 export const Button: FC<IButtonProps> = (props): JSX.Element => {
-    const {size, disabled, label, onClick, ...rest} = props
+    const { label, isLoading = false, ...rest } = props
 
     return (
         <StyledButton
-            onClick={onClick} 
-            disabled={disabled} 
-            size={size} 
             {...rest}
         >
-            {label}
+            {isLoading ? (
+                <>
+                    {label}<Loader isLoading={isLoading} size='small' color={rest.color} />
+                </>
+            ) : label}
         </StyledButton>
     )
 }
