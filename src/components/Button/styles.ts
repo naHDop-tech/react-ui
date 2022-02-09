@@ -10,7 +10,12 @@ export const StyledButton = styled.button<IButtonProps>`
     cursor: pointer;
     font-weight: 400;
     border-radius: 4px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+
+    div {
+      margin-left: 10px;
+    }
 
     ${({ size = 'medium', outline = false }) => {
       if (size === 'large') {

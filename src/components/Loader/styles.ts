@@ -9,10 +9,6 @@ const speedMap = Object.freeze({
     fast: '1s',
 })
 
-export const Wrapper = styled.div`
-    margin: 14px;
-`
-
 export const Spinner = styled.div<Omit<ILoaderProps, 'isLoading'>>`
     border-radius: 50%;
 
