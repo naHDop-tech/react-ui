@@ -10,6 +10,7 @@ export const Button: FC<IButtonProps> = (props): JSX.Element => {
 
     return (
         <StyledButton
+            isLoading={isLoading}
             {...rest}
         >
             {isLoading ? (

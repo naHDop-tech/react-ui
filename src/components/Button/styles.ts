@@ -40,7 +40,7 @@ export const StyledButton = styled.button<IButtonProps>`
     color: ${({ color }) => color === 'disabled' || color === 'inactive' ? COLOR_MAP.disabledText : COLOR_MAP.pureWhite};
     background-color: ${({ color = 'primary' }) => COLOR_MAP[color]};
 
-    ${({ disabled = false }) => disabled && 
+    ${({ disabled = false, isLoading = false }) => (disabled || isLoading) && 
       css`
         opacity: 0.8;
         pointer-events: none;
