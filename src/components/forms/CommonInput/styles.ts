@@ -9,12 +9,16 @@ const onActiveMixin = css`
     background: ${COLOR_MAP.hex.common.pureWhite};
 `
 
+const smallText = css`
+    font-size: 12px;
+    line-height: 18px;
+`
+
 export const Wrapper = styled.div<Pick<ICommonInputProps, 'hasError'>>`
     font-family: inherit;
 
     .label {
-        font-weight: 600;
-        font-size: 12px;
+        ${smallText}
         line-height: 18px;
 
         letter-spacing: -0.24px;
@@ -28,8 +32,7 @@ export const Wrapper = styled.div<Pick<ICommonInputProps, 'hasError'>>`
 
     .error-message {
         font-weight: 400;
-        font-size: 12px;
-        line-height: 18px;
+        ${smallText}
 
         letter-spacing: -0.08px;
 
