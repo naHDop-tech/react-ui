@@ -4,13 +4,13 @@ import { Wrapper, BaseInput } from './styles'
 import { ICommonInputProps } from './types'
 
 export function CommonInput(props: ICommonInputProps) {
-    const { label, errorMessage } = props
+    const { label, errorMessage, hasError } = props
 
     return (
-        <Wrapper hasError={props.hasError}>
+        <Wrapper hasError={hasError}>
             {label && <div className='label'>{label}</div>}
             <BaseInput {...props} />
-            {props.hasError && <div className='error-message'>{errorMessage}</div>}
+            {hasError && <div className='error-message'>{errorMessage}</div>}
         </Wrapper>
     )
 }

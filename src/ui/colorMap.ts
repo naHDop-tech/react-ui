@@ -13,6 +13,7 @@ export const COLOR_MAP = Object.freeze({
             disabledText: '#88888B',
             lightGrey: '#f3f3f3',
             lightBackground: '#FBFCFD',
+            disabledBackdground: '#EEF2F7',
         }
     },
     rgba: {

@@ -60,7 +60,7 @@ export const BaseInput = styled.input<ICommonInputProps>`
             box-shadow: none;
             border-bottom: 2px solid ${COLOR_MAP.hex.primary.error};
 
-            &:focus{
+            &:focus {
                 ${onActiveMixin}
                 border-bottom: 2px solid ${COLOR_MAP.hex.primary.error};
             }
@@ -68,4 +68,10 @@ export const BaseInput = styled.input<ICommonInputProps>`
     }
 
     ${({ wide }) => wide && 'width: 100%'};
+
+    ${({ disabled }) => disabled && css`
+        border: 1px solid rgba(15, 39, 118, 0.1);
+        background: ${COLOR_MAP.hex.common.disabledBackdground};
+        color: ${COLOR_MAP.hex.common.disabledText};
+    `}
 `
