@@ -63,4 +63,6 @@ export const BaseInput = styled.input<ICommonInputProps>`
             }
         `
     }
+
+    ${({ wide }) => wide && 'width: 100%'};
 `
