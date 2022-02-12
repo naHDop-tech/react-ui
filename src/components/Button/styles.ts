@@ -37,8 +37,8 @@ export const StyledButton = styled.button<IButtonProps>`
       }
     }}
 
-    color: ${({ color }) => color === 'disabled' || color === 'inactive' ? COLOR_MAP.disabledText : COLOR_MAP.pureWhite};
-    background-color: ${({ color = 'primary' }) => COLOR_MAP[color]};
+    color: ${({ color }) => color === 'disabled' || color === 'inactive' ? COLOR_MAP.hex.common.disabledText : COLOR_MAP.hex.common.pureWhite};
+    background-color: ${({ color = 'primary' }) => COLOR_MAP.hex.primary[color]};
 
     ${({ disabled = false, isLoading = false }) => (disabled || isLoading) && 
       css`
@@ -55,9 +55,9 @@ export const StyledButton = styled.button<IButtonProps>`
 
     ${({ outline = false, color = 'primary' }) => outline && 
       css`
-        color: ${COLOR_MAP[color]};
+        color: ${COLOR_MAP.hex.primary[color]};
         background-color: transparent;
-        border: 1px solid ${COLOR_MAP[color]};
+        border: 1px solid ${COLOR_MAP.hex.primary[color]};
       `
     };
 

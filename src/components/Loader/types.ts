@@ -1,9 +1,9 @@
-import { Colors, Sizes } from '@ui/types'
+import { PromaryColors, Sizes } from '@ui/types'
 
 export interface ILoaderProps {
     isLoading: boolean
     size?: Sizes
     wide?: boolean
-    color?: Colors
+    color?: PromaryColors
     speed?: 'slow' | 'normal' | 'fast'
 }

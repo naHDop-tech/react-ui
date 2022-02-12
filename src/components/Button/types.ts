@@ -1,11 +1,11 @@
 import {  MouseEventHandler } from "react"
 
-import { Colors, Sizes } from '@ui/types'
+import { PromaryColors, Sizes } from '@ui/types'
 
 export interface IButtonProps {
     type?: "button" | "submit"
     label?: string,
-    color?: Colors 
+    color?: PromaryColors 
     disabled?: boolean,
     size?: Sizes,
     isLoading?: boolean
