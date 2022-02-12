@@ -20,7 +20,7 @@ const App = (): JSX.Element => {
     const [text, setText] = useState<string>('')
 
     const onClickHandler: ReactEventHandler = (e) => {
-        console.log('Tech friday button are clicked')
+        console.log(text)
     }
 
     const onChangeHandler: ChangeEventHandler<HTMLInputElement> = (e) => {
@@ -33,9 +33,8 @@ const App = (): JSX.Element => {
 
             <Button 
                 label="Push me"
-                onCLick={onClickHandler}
-                color="success"
-                type="submit"
+                onClick={onClickHandler}
+                type="button"
             />
         </form>
     )
