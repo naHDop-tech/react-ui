@@ -7,5 +7,6 @@ export const COLOR_MAP = Object.freeze({
     disabled: '#C2C3C6',
     pureWhite: '#FFFFFF',
     disabledText: '#88888B',
-    lightGrey: '#f3f3f3'
+    lightGrey: '#f3f3f3',
+    lightBackground: '#FBFCFD',
 })
