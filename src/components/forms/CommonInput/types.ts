@@ -4,7 +4,7 @@ export interface ICommonInputProps {
     id?: string,
     label?: string,
     hasError?: boolean,
-    message?: string,
+    errorMessage?: string,
     success?: boolean,
     disabled?: boolean,
     readonly?: boolean,

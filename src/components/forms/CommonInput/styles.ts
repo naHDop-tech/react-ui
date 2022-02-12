@@ -9,6 +9,34 @@ const onActiveMixin = css`
     background: ${COLOR_MAP.hex.common.pureWhite};
 `
 
+export const Wrapper = styled.div<Pick<ICommonInputProps, 'hasError'>>`
+    font-family: inherit;
+
+    .label {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+
+        letter-spacing: -0.24px;
+
+        ${({ hasError }) => hasError && 
+            css`
+                color: ${COLOR_MAP.hex.primary.error};
+            `
+        }
+    }
+
+    .error-message {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+
+        letter-spacing: -0.08px;
+
+        color: ${COLOR_MAP.hex.primary.error};
+    }
+`
+
 export const BaseInput = styled.input<ICommonInputProps>`
     font-family: inherit;
     padding: 8px 12px;
