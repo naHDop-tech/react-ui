@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { TextInput }  from './TextInput.component';
-import { ITextInputProps } from "./types"
+import { ICommonInputProps } from '../CommonInput/types'
 
 export default {
   title: 'Tech-friday/TextInput',
@@ -10,32 +10,11 @@ export default {
   },
 } as Meta<typeof TextInput>;
 
-const Template: Story<ITextInputProps> = (args) => <TextInput {...args} />;
+const Template: Story<Omit<ICommonInputProps, 'type'>> = (args) => <TextInput {...args} />;
 
 export const Primary = Template.bind({});
+
 Primary.args = {
-  error: false,
-  disabled: false,
-  label: 'Primary',
-};
-
-export const Success = Template.bind({});
-Success.args = {
-  error: false,
-  success:true,
-  disabled: false,
-  label: "Success",
-};
-
-export const Error = Template.bind({});
-Error.args = {
-  error: true,
-  disabled: false,
-  message: "Error",
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  disabled: true,
-  label: 'Disabled',
+  label: 'Text input',
+  placeholder: 'Enter your text',
 };

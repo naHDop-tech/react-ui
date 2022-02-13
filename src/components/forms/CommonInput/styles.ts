@@ -1,3 +1,4 @@
+import { HTMLProps } from 'react'
 import styled, { css } from 'styled-components'
 
 import { COLOR_MAP } from '@ui/colorMap'
@@ -50,7 +51,7 @@ export const BaseInput = styled.input<ICommonInputProps>`
     box-shadow: 0px 1px 1px ${COLOR_MAP.rgba.greyShadow},
         0px 3px 2px ${COLOR_MAP.rgba.greyShadow};
 
-    &:focus{
+    &:focus {
         ${onActiveMixin}
         border-bottom: 2px solid ${COLOR_MAP.hex.primary.primary};
     }
@@ -68,6 +69,17 @@ export const BaseInput = styled.input<ICommonInputProps>`
     }
 
     ${({ wide }) => wide && 'width: 100%'};
+
+    ${({ readOnly }) => readOnly && css`
+        background: ${COLOR_MAP.hex.common.pureWhite};
+
+        &:focus {
+            border: 1px solid ${COLOR_MAP.rgba.greyBorder};
+            box-shadow: 0px 1px 1px ${COLOR_MAP.rgba.greyShadow},
+                0px 3px 2px ${COLOR_MAP.rgba.greyShadow};
+            border-bottom: 1px solid ${COLOR_MAP.rgba.greyBorder};
+        }
+    `};
 
     ${({ disabled }) => disabled && css`
         border: 1px solid rgba(15, 39, 118, 0.1);

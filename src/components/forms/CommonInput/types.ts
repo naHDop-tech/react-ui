@@ -5,10 +5,11 @@ export interface ICommonInputProps {
     label?: string
     hasError?: boolean
     errorMessage?: string
-    success?: boolean
+    type: string
     disabled?: boolean
-    readonly?: boolean
+    readOnly?: boolean
     placeholder?: string
     wide?: boolean
+    defaultValue?: any
     onChange?: ChangeEventHandler<HTMLInputElement>
 }
