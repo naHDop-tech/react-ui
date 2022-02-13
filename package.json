@@ -16,8 +16,8 @@
     "type": "git",
     "url": "git+https://github.com/naHDop-tech/react-ui.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["React", "Storybook", "Styled component", "TypeScript"],
+  "author": "naHDop",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/naHDop-tech/react-ui/issues"
