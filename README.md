@@ -44,3 +44,4 @@ const App = (): JSX.Element => {
 # List implemented components from design
  - Button
  - Loader
+ - TextInput

@@ -18,8 +18,8 @@ export const Spinner = styled.div<Omit<ILoaderProps, 'isLoading'>>`
             width: 80px;
             height: 80px;
 
-            border: 20px solid ${COLOR_MAP.lightGrey};
-            border-top: 20px solid ${COLOR_MAP[color]};
+            border: 20px solid ${COLOR_MAP.hex.common.lightGrey};
+            border-top: 20px solid ${COLOR_MAP.hex.primary[color]};
         `
       }
       if (size === 'medium') {
@@ -27,8 +27,8 @@ export const Spinner = styled.div<Omit<ILoaderProps, 'isLoading'>>`
             width: 40px;
             height: 40px;
 
-            border: 10px solid ${COLOR_MAP.lightGrey};
-            border-top: 10px solid ${COLOR_MAP[color]};
+            border: 10px solid ${COLOR_MAP.hex.common.lightGrey};
+            border-top: 10px solid ${COLOR_MAP.hex.primary[color]};
         `
       }
       if (size === 'small') {
@@ -36,8 +36,8 @@ export const Spinner = styled.div<Omit<ILoaderProps, 'isLoading'>>`
             width: 16px;
             height: 16px;
 
-            border: 3px solid ${COLOR_MAP.lightGrey};
-            border-top: 3px solid ${COLOR_MAP[color]};
+            border: 3px solid ${COLOR_MAP.hex.common.lightGrey};
+            border-top: 3px solid ${COLOR_MAP.hex.primary[color]};
         `
       }
     }}
