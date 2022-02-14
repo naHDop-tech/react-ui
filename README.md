@@ -45,3 +45,5 @@ const App = (): JSX.Element => {
  - Button
  - Loader
  - TextInput
+ - NumberInput
+ - PasswordInput
