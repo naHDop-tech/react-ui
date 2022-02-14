@@ -3,7 +3,7 @@ import React from 'react'
 import { Wrapper, BaseInput } from './styles'
 import { ICommonInputProps } from './types'
 
-export function CommonInput(props: ICommonInputProps) {
+export function CommonInput(props: ICommonInputProps): JSX.Element {
     const { label, errorMessage, hasError } = props
 
     return (
