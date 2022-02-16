@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import alias from '@rollup/plugin-alias';
+import svg from 'rollup-plugin-svg'
 
 import dts from "rollup-plugin-dts";
 import { terser } from "rollup-plugin-terser";
@@ -37,7 +38,8 @@ export default [
                     { find: '@ui', replacement: path.resolve(__dirname, "src/ui") },
                     { find: '@components', replacement: path.resolve(__dirname, "src/components") }
                 ]
-            })
+            }),
+            svg()
         ],
         external: ["react", "react-dom", "styled-components"]
     },

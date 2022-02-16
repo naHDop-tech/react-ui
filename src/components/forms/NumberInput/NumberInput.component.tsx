@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 
-import { CommonInput } from '@components/forms/CommonInput'
 import { ICommonInputProps } from '@components/forms/CommonInput/types'
 
 import { NumberWrapper, Input } from './styles'

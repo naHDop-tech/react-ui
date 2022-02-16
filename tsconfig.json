@@ -5,6 +5,7 @@
       "@components/*": ["components/*"],
       "@ui/*": ["ui/*"],
     },
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
