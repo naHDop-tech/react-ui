@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { BaseInput, Wrapper } from '@components/forms/CommonInput/styles'
-import LockIcon from '/static/svg/password_lock_icon.svg'
+// import LockIcon from '/static/svg/password_lock_icon.svg'
 
 export const PasswordWrapper = styled(Wrapper)`
     position: relative;

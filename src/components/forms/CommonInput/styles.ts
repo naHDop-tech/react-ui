@@ -17,9 +17,12 @@ const smallTextMixin = css`
 
 export const Wrapper = styled.div<Pick<ICommonInputProps, 'hasError'>>`
     font-family: inherit;
+    display: flex;
+    flex-direction: column;
 
     .label {
         ${smallTextMixin}
+        text-align: left;
         line-height: 18px;
 
         letter-spacing: -0.24px;
