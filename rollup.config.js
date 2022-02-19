@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import alias from '@rollup/plugin-alias';
+import url from '@rollup/plugin-url';
 
 import dts from "rollup-plugin-dts";
 import { terser } from "rollup-plugin-terser";
@@ -30,6 +31,7 @@ export default [
             peerDepsExternal(),
             resolve(),
             commonjs(),
+            url(),
             typescript({ tsconfig: "./tsconfig.json" }),
             terser(),
             alias({
