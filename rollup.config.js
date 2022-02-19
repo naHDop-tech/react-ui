@@ -4,8 +4,10 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import alias from '@rollup/plugin-alias';
+import url from '@rollup/plugin-url';
 
 import dts from "rollup-plugin-dts";
+import sourcemaps from 'rollup-plugin-sourcemaps';
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
@@ -30,8 +32,10 @@ export default [
             peerDepsExternal(),
             resolve(),
             commonjs(),
-            typescript({ tsconfig: "./tsconfig.json" }),
+            url(),
+            typescript({ tsconfig: "./tsconfig.json", sourceMap: true, inlineSources: true }),
             terser(),
+            sourcemaps(),
             alias({
                 entries: [
                     { find: '@ui', replacement: path.resolve(__dirname, "src/ui") },
